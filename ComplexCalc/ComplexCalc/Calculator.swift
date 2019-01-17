@@ -11,6 +11,7 @@ import Foundation
 // All your work will go in here
 class Calculator {
     
+    // simple calculation
     func add(lhs: Int, rhs: Int) -> Int {
         return lhs + rhs
     }
@@ -27,6 +28,7 @@ class Calculator {
         return lhs / rhs
     }
     
+    // complex comculation with array
     func mathOp(lhs: Int, rhs: Int, op: (Int, Int) -> Int) -> Int {
         return op(lhs, rhs)
     }
@@ -70,6 +72,26 @@ class Calculator {
         }        
         return result
     }
+    
+    //calculation with tulples
+    func add(lhs: (Int, Int), rhs: (Int, Int)) -> (Int, Int) {
+        return (lhs.0 + rhs.0, lhs.1 + rhs.1)
+    }
+    
+    func subtract(lhs: (Int, Int), rhs: (Int, Int)) -> (Int, Int) {
+        return (lhs.0 - rhs.0, lhs.1 - rhs.1)
+    }
+    
+    //assert(calc.add(lhs: pd1, rhs: pd2) == ["x": 1, "y": 9])
+    func add(lhs: [String: Int], rhs: [String: Int]) -> [String: Int] {
+        return ["x": lhs["x"]! + rhs["x"]!, "y": lhs["y"]! + rhs["y"]!]
+    }
+    
+    func subtract(lhs: [String: Int], rhs: [String: Int]) -> [String: Int] {
+        return ["x": lhs["x"]! - rhs["x"]!, "y": lhs["y"]! - rhs["y"]!]
+    }
+    
+    
     
     
     
