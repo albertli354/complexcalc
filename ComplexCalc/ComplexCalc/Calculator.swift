@@ -27,6 +27,43 @@ class Calculator {
         return lhs / rhs
     }
     
+    func mathOp(lhs: Int, rhs: Int, op: (Int, Int) -> Int) -> Int {
+        return op(lhs, rhs)
+    }
+    
+    func add(_ intArray: [Int]) -> Int {
+        var result: Int = 0
+        for element in intArray {
+            result += element
+        }
+        return result
+    }
+    
+    func multiply(_ intArray: [Int]) -> Int {
+        if intArray.count == 0 {
+            return 0
+        }
+        
+        var result: Int = 1
+        for element in intArray {
+            result *= element
+        }
+        return result
+    }
+    
+    func count(_ intArray: [Int]) -> Int {
+        return intArray.count
+    }
+    
+    func avg(_ intArray: [Int]) -> Int {
+        if intArray.count == 0 {
+            return 0
+        }
+
+        return add(intArray)/count(intArray)
+    }
+    
+    
     
     
 }
