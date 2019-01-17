@@ -63,6 +63,14 @@ class Calculator {
         return add(intArray)/count(intArray)
     }
     
+    func mathOp(args: [Int], beg: Int, op: (Int, Int) -> Int) -> Int {
+        var result: Int = beg
+        for element in args {
+            result = op(element, result)
+        }        
+        return result
+    }
+    
     
     
     
