@@ -15,7 +15,10 @@ let calc = Calculator()  // Don't change this declaration name; it's used in all
 // ====> Add your own tests here if you wish <====
 assert(calc.multiply([0]) == 0)
 assert(calc.multiply([]) == 0)
+assert(calc.multiply([1]) == 1)
+assert(calc.multiply([1, 0]) == 0)
 assert(calc.mathOp(args: [1], beg: 1, op: { $0 * $1 }) == 1)
+
 
 // ====> Do not modify code in this section <====
 assert(calc.add(lhs: 2, rhs: 2) == 4)

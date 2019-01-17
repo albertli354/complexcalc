@@ -28,7 +28,7 @@ class Calculator {
         return lhs / rhs
     }
     
-    // complex comculation with array
+    // comculation with array
     func mathOp(lhs: Int, rhs: Int, op: (Int, Int) -> Int) -> Int {
         return op(lhs, rhs)
     }
@@ -72,6 +72,7 @@ class Calculator {
         }        
         return result
     }
+    
     
     //calculation with tulples
     func add(lhs: (Int, Int), rhs: (Int, Int)) -> (Int, Int) {
