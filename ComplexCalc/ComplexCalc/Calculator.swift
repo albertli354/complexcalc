@@ -83,7 +83,6 @@ class Calculator {
         return (lhs.0 - rhs.0, lhs.1 - rhs.1)
     }
     
-    //assert(calc.add(lhs: pd1, rhs: pd2) == ["x": 1, "y": 9])
     func add(lhs: [String: Int], rhs: [String: Int]) -> [String: Int] {
         return ["x": lhs["x"]! + rhs["x"]!, "y": lhs["y"]! + rhs["y"]!]
     }
